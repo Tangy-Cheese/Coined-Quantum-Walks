@@ -5,12 +5,16 @@ import pandas as pd
 time_steps = [20, 40, 60, 80, 100]
 size = 2 * max(time_steps) + 1
 initial_position = size // 2
-j = 10
+
+# Realisations
+j = 10 
 disorder_strength = np.linspace(0, 1, 10)
 
 # Coin operator with disorder
 def G_gate(disorder, w):
+
     r_x = 0.5 * (1 + w * disorder)
+
     G = np.array([
         [np.sqrt(r_x), np.sqrt(1 - r_x)],
         [np.sqrt(1 - r_x), -np.sqrt(r_x)]
@@ -54,4 +58,4 @@ for t in time_steps:
 # Saving data as CSV
 df = pd.DataFrame(data, index=disorder_strength)
 df.index.name = 'Disorder Strength'
-df.to_csv('participation_data.csv')
+df.to_csv(r"../../output/data/1D_PV.csv")
