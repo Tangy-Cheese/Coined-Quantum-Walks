@@ -10,9 +10,9 @@ These codes were originally used for HPC clusters to utilise parallel processing
 2. Edit the job scripts to match the desired parameters and cluster settings (nodes, tasks, walltime, etc.). 
 3. Make the script executable:
    ```bash
-   chmod -rwx job.sh
+   chmod -rwx example_job.sh
    ```
 4. Submit the job:
    ```bash
-   sbatch job.sh
+   sbatch example_job.sh
    ```
