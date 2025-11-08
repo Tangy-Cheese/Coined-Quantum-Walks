@@ -8,7 +8,7 @@ initial_position = size // 2
 
 # Realisations
 j = 10 
-disorder_strength = np.linspace(0, 1, 10)
+disorder_strength = np.linspace(0, 1, 11)
 
 # Coin operator with disorder
 def G_gate(disorder, w):
