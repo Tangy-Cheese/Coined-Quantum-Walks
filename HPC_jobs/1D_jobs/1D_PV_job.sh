@@ -13,4 +13,7 @@ module load PyTorch/2.0-Miniconda3-4.12.0-Python-3.10.4
 module load GCC/11.3.0 OpenMPI/4.1.4 SciPy-bundle/2022.05
 module load GCCcore/11.3.0 Python/3.10.4
 
-python ../../src/CQW_1D/1D_PV.py 100 500
+j = 100
+python ../../src/CQW_1D/1D_PV.py $j
+
+ 

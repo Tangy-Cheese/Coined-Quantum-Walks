@@ -1,14 +1,21 @@
 import numpy as np
 import pandas as pd
 from numba import prange, njit
+import sys #For scripting runs
 
 # Parameters
-time_steps = [20, 40, 60, 80, 100]
+time_steps = [5, 10 , 15, 20]
 size = 2 * max(time_steps) + 1
 initial_position = size // 2
 
 # Realisations
-j = 10 
+j = 200 # This is fine for local runs 
+
+# Just saying here if we wanna change the variable j, can do it in the SLURM script easily by adding another argument
+if len(sys.argv) == 2:
+    j = sys.argv[1]
+
+#Evenly spaced disorder strengths
 disorder_strength = np.linspace(0, 1, 11)
 
 # Coin operator with disorder
@@ -60,6 +67,6 @@ for t in time_steps:
 df = pd.DataFrame(data, index=disorder_strength)
 df.index.name = 'Disorder Strength'
 
-# Add j to the data
+# Add j to the data as another column. This is just for convenience though.
 df["j"] = j
 df.to_csv(r"../../output/data/1D_PV.csv")
