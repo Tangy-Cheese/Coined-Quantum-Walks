@@ -59,4 +59,7 @@ for t in time_steps:
 # Saving data as CSV
 df = pd.DataFrame(data, index=disorder_strength)
 df.index.name = 'Disorder Strength'
+
+# Add j to the data
+df["j"] = j
 df.to_csv(r"../../output/data/1D_PV.csv")
