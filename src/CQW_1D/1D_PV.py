@@ -4,16 +4,16 @@ from numba import prange, njit
 import sys #For scripting runs
 
 # Parameters
-time_steps = [5, 10 , 15, 20]
+time_steps = [10, 25, 50, 100]
 size = 2 * max(time_steps) + 1
 initial_position = size // 2
 
 # Realisations
-j = 200 # This is fine for local runs 
+j = 10 # This is fine for local runs 
 
 # Just saying here if we wanna change the variable j, can do it in the SLURM script easily by adding another argument
 if len(sys.argv) == 2:
-    j = sys.argv[1]
+    j = int(sys.argv[1])
 
 #Evenly spaced disorder strengths
 disorder_strength = np.linspace(0, 1, 11)
