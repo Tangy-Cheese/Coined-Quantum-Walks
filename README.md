@@ -154,6 +154,14 @@ As $P \to 1$, the walk is highly delocalized; as $P \to 0$, the walk is strongly
 
 ## Running the Code
 
+### Installation
+
+```bash
+git clone https://github.com/Tangy-Cheese/Coined-Quantum-Walks
+cd Coined-Quantum-Walks
+pip install -e .
+```
+
 ### Local (small systems)
 
 Example scripts for modest lattice sizes can be run directly:
