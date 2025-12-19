@@ -38,27 +38,38 @@ High-dimensional simulations (especially 3D) require **large memory systems** an
 ## Repository Structure
 
 ```text
-Coined-Quantum-Walks/
-├── src/                     # Core simulation scripts
-│   ├── 1D_runs/             # 1D quantum walk simulations
+Coined-Quantum-Walks/               # Project root
+├── src/                           # Core simulation code
+│   ├── operators/                # Quantum walk building blocks
+│   │   ├── __init__.py
+│   │   ├── coins.py              # Disordered coin operators (1D/2D/3D)
+│   │   └── shifts.py             # Shift operators
+│   │
+│   ├── observables/              # Measurement routines
+│   │   ├── __init__.py
+│   │   ├── participation.py      # Participation ratios
+│   │   ├── entropy.py            # Entanglement entropy
+│   │   └── fidelity.py           # State fidelity
+│   │
+│   ├── 1D_runs/                  # 1D quantum walk simulations
 │   │   ├── run_1d_example.py
-│   │   ├── 1d_ee.py         # Entanglement entropy
-│   │   ├── 1d_fidelity.py   # State fidelity
-│   │   └── 1D_PV.py         # Participation values
+│   │   ├── 1d_ee.py              # 1D entanglement entropy script
+│   │   ├── 1d_fidelity.py        # 1D state fidelity script
+│   │   └── 1D_PV.py              # 1D participation values script
 │   │
-│   ├── 2D_runs/             # 2D quantum walk simulations
+│   ├── 2D_runs/                  # 2D quantum walk simulations
 │   │   ├── run_2d_example.py
-│   │   ├── 2d_ee.py
-│   │   ├── 2d_fidelity.py
-│   │   └── 2d_pv.py
+│   │   ├── 2d_ee.py              # 2D entanglement entropy script
+│   │   ├── 2d_fidelity.py        # 2D state fidelity script
+│   │   └── 2d_pv.py              # 2D participation values script
 │   │
-│   └── 3D_runs/             # 3D quantum walk simulations
+│   └── 3D_runs/                  # 3D quantum walk simulations
 │       ├── run_3d_example.py
-│       ├── 3d_ee.py
-│       ├── 3d_fidelity.py
-│       └── 3d_pv.py
+│       ├── 3d_ee.py              # 3D entanglement entropy script
+│       ├── 3d_fidelity.py        # 3D state fidelity script
+│       └── 3d_pv.py              # 3D participation values script
 │
-├── plotters/                # Post-processing and plotting scripts
+├── plotters/                     # Plotting and visualization scripts
 │   ├── 1D_plotting/
 │   │   ├── 1D_EE_plot.py
 │   │   ├── 1D_SF_plot.py
@@ -74,7 +85,7 @@ Coined-Quantum-Walks/
 │       ├── 3D_SF_plot.py
 │       └── 3D_PV_plot.py
 │
-├── HPC_jobs/                # SLURM job scripts for cluster execution
+├── SLURM_jobs/                   # SLURM batch scripts for HPC runs
 │   ├── 1D_jobs/
 │   │   ├── 1D_EE_job.sh
 │   │   ├── 1D_SF_job.sh
@@ -90,13 +101,15 @@ Coined-Quantum-Walks/
 │       ├── 3D_SF.sh
 │       └── 3D_PV.sh
 │
-├── output/
-│   ├── data/                # Raw numerical output
-│   └── logs/                # Simulation and SLURM logs
+├── output/                      # Generated data and logs
+│   ├── data/                    # Numerical output (CSV, NPZ, etc.)
+│   └── logs/                    # Simulation and SLURM logs
 │
-├── Coined_Quantum_Walks.pdf # Full theory, methodology, and results
-├── LICENSE                  # MIT License
-└── README.md
+├── LICENSE                      # MIT license
+├── pyproject.toml               # Project build / install config
+└── README.md                    # Project overview and usage
+
+
 ```
 
 ## Key Quantities Computed
