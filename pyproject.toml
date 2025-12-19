@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cqw"
+version = "0.1.0"
+description = "Disordered coined quantum walk simulations in 1D, 2D, and 3D"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "numba",
+    "matplotlib"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
