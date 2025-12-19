@@ -69,7 +69,7 @@ def shift_2d(state: np.ndarray) -> np.ndarray:
     return new_state
 
 
-def shift_3d(state):
+def shift_3d(state: np.ndarray) -> np.ndarray:
     """
     Apply the 3D conditional shift operator for a coined quantum walk
     on a cubic lattice with diagonal propagation.
@@ -103,6 +103,7 @@ def shift_3d(state):
         input state.
     """
     new_state = np.zeros_like(state)
+    
     new_state[1:, 1:, 1:, 0] = state[:-1, :-1, :-1, 0]  
     new_state[1:, 1:, :-1, 1] = state[:-1, :-1, 1:, 1]  
     new_state[1:, :-1, 1:, 2] = state[:-1, 1:, :-1, 2]  
