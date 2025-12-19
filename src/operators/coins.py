@@ -1,6 +1,6 @@
 import numpy as np
 
-def G_1d(disorder, w):
+def G_1d(disorder: float, w: float) -> np.ndarray:
 
     r_x = 0.5 * (1 + w * disorder)
 
@@ -11,5 +11,5 @@ def G_1d(disorder, w):
     return G
 
 if __name__ == "__main__":
-
-    pass
+    G1 = G_1d(1, 0)
+    print(G1)
