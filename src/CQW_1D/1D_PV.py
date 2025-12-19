@@ -4,6 +4,7 @@ from numba import prange, njit
 import sys #For scripting runs
 
 from operators import shift_1d, G_1d
+from observables import participation_1d
 
 # Parameters
 time_steps = [10, 25, 50, 100]
