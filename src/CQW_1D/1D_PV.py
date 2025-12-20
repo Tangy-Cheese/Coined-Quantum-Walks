@@ -40,7 +40,7 @@ for t in time_steps:
                     state[x, :] = np.dot(G_1d(random_disorder[x], W), state[x, :])
                 state = shift_1d(state)
 
-            participation_value = 1 / (np.sum(np.abs(state)**4) * ((2*t)+1))
+            participation_value = participation_1d(state, t)
             total_participation += participation_value
 
 
