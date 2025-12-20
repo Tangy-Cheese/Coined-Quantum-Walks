@@ -3,8 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
-# Load data from CSV file
-df = pd.read_csv('../../output/data/1D_PV.csv')
+# Please change path to output manually or from simluation directory directly.
+
+# Change the name of the file needed to plot
+df = pd.read_csv('../../output/data/2D_PV.csv')
 
 time_steps = df.columns[1:-1]
 list(time_steps)
