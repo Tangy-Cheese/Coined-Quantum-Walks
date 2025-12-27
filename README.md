@@ -7,7 +7,6 @@
 This project accompanies the research work:
 
 **“Properties of Localized Multi-Dimensional Disordered Coined Quantum Walks”**  
-*Adam Tang — Department of Physics, University of Warwick*
 
 The codebase implements numerical simulations of **discrete-time coined quantum walks** in **one, two, and three dimensions**, with a focus on **quenched disorder**, **Anderson localization**, and quantum information measures such as **entanglement entropy**, **state fidelity**, and **participation values**.
 
@@ -209,10 +208,3 @@ This repository reflects an **early-stage research implementation**:
 A **clean, modular rewrite** with improved performance and structure is currently in progress.
 
 ---
-
-## Citation
-
-If you use or reference this work, please cite:
-
-Adam Tang, *Properties of Localized Multi-Dimensional Disordered Coined Quantum Walks*,  
-Department of Physics, University of Warwick.
