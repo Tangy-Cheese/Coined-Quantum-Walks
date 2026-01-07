@@ -1,6 +1,6 @@
-# Ignore all NumPy binary files
 *.npz
 *.csv
 *.png
 __pycache__/
 *.egg-info/
+*.vscode/
