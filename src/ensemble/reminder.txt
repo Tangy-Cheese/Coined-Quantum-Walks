@@ -1,0 +1,14 @@
+Here I will just write a reminder on the progress of this project.
+
+I guess ensemble will be the largest file with 12 functions.
+
+12 functions for 12 different runs where lots of them will be repeated.
+
+Why?
+
+This is because you cannot njit using python functions so we will have a lot of repeat throughout the codes. I will write unit tests to see i
+if the results are similar to that where I have used functions from operators and observables instead.
+
+After that I will utilise some timing code, perhaps with jupyter notebook. Just to see whether there is in fact a speedup with the codes and where they can be optimised.
+
+I think after that, it just needs some cleanup and plottings and perhaps HPC cluster work then it is fine. Finished for now more or less??
